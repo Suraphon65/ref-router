@@ -11,7 +11,7 @@ function Contact() {
         <br />
         Warin Chamrap District
         <br />
-        Ubon Ratchathani
+        Ubon Ratchathan
         <br />
         Thailand 34190
       </div>
