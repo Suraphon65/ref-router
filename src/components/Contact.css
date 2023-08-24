@@ -1,0 +1,21 @@
+.imgme{
+    display: block;
+    margin: auto;
+    height: 350px;
+    
+}
+.textme{
+    background-image: linear-gradient(to right, 
+    red, rgb(255, 166, 0), rgb(7, 122, 253), rgb(255, 0, 234), rgb(177, 255, 10), indigo, violet
+    );
+    background-clip: text;
+    color: transparent;
+    font-size: 80px;
+    text-align: center;
+
+}
+.textme1{
+    display: block;
+    margin: auto;
+     font-size: 50px;
+}

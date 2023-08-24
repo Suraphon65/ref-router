@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&family=Mitr:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Niramit:wght@200&family=Sigmar&display=swap');
+
+.imgfoodlist{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    column-gap: 30px;
+    row-gap: 16px;
+    text-align: center;
+    
+}
+.imga01{
+    width: 350px;
+    height: 250px;
+    
+    
+}
+.imga02{
+    width: 350px;
+    height: 250px;
+}
+.imga03{
+    width: 350px;
+    height: 250px;
+}
+
+.texta1{
+    color: rgb(33, 31, 31);
+    font-family: 'Sarabun';
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Mitr';
+    
+    
+}
+.texta01{
+    color: rgb(33, 31, 31);
+    font-family: 'Mitr';
+}
+
+
+.texta2{
+    color: rgb(58, 54, 54);
+    font-family: 'Sarabun';
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Mitr';
+}
+.texta02{
+    left: 10px;
+    right: 10px;
+    color: rgb(33, 31, 31);
+    font-family: 'Sarabun';
+    font-size: 29x;
+    font-family: 'Mitr';
+   
+   
+}
+
+.texta3{
+    color: rgb(33, 31, 31);
+    font-family: 'Sarabun';
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Mitr';
+}
+.texta03{
+    left: 10px;
+    right: 10px;
+    color: rgb(33, 31, 31);
+    font-family: 'Sarabun';
+    font-size: 29x;
+    font-family: 'Mitr';
+}
+
+.grid-container{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px; /* ระยะห่างระหว่างปุ่มและรูป */
+  text-align: center;
+}
+.howto1{
+    text-align: center;
+    background-color: rgb(71, 71, 77);
+    color: aliceblue;
+    font-family: 'Inconsolata';
+}
+.howto2{
+    text-align: center; 
+    background-color: rgb(71, 71, 77);
+    color: aliceblue;
+    font-family: 'Inconsolata';
+}
+.howto3{
+    text-align: center;
+    background-color: rgb(71, 71, 77);
+    color: aliceblue;
+    font-family: 'Inconsolata';
+    
+}
+
+
+/* .textpimga01{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  */

@@ -1,86 +1,91 @@
-import React,{ useRef } from "react";
+import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
-import { Container , Button,Table } from "react-bootstrap";
+import "./App.css";
+import { Container, Button, Table } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import Contact from "./Contact";
+import Contact from "./components/Contact";
+import FoodList from "./components/Data/FoodList";
+import Footer from "./components/Footer";
+import MenuFood from "./components/Menufood";
 
 export function Layout() {
   return (
-    <nav className="bg-secondary p-2 mb-3 text-center">
+    <nav className="Menubg  p-3 mb-4 ">  
+    {/* <nav className="bg-secondary p-2 mb-3 text-center">  */}
+    
       <NavLink
         to="/"
-        className="link px-2"
-        style={({ isActive }) => {
-          return {
-            textDecoration: isActive ? "none" : "underline",
-          };
-        }}
-      >
-        Main
+        className="Menu1 px-3"
+        // style={({ isActive }) => {
+        //   return {
+            
+        //   };
+        // }}
+      > 🍱🍣🍲
+        หน้าหลัก 
       </NavLink>
       <NavLink
         to="/product"
-        className="link px-2"
-        style={({ isActive }) => {
-          return {
-            textDecoration: isActive ? "none" : "underline",
-          };
-        }}
+        className="Menu2 px-2"
+        // style={({ isActive }) => {
+        //   return {
+        //     textDecoration: isActive ? "none" : "underline",
+        //   };
+        // }}
       >
-        Product
+        เมนูอาหารญีปุ่น
       </NavLink>
       <NavLink
         to="/contact"
-        className="link px-2"
-        style={({ isActive }) => {
-          return {
-            textDecoration: isActive ? "none" : "underline",
-          };
-        }}
+        className="Menu3 px-2"
+        // style={({ isActive }) => {
+        //   return {
+        //     textDecoration: isActive ? "none" : "underline",
+        //   };
+        // }}
       >
-        Contact Us
+        ผู้จัดทำ
       </NavLink>
     </nav>
   );
 }
 
+
 function Index() {
   const header1 = useRef();
-  return (
+  return ( 
     <>
-    <Layout/>
-    <h3 ref={header1 }>Hello</h3>
-    <Button onClick={()=>{header1.current.innerHTML = "React";
-    }}
-    >
-      Click Me
-      </Button>
+      <Layout />
+      
+      <h3 className="Textfoodlist">วิธีทำอาหารญี่ปุ่นยอดฮิต</h3>
+      <FoodList/>
+      <Footer/>
     </>
   );
 }
 
-
-function Product(){
+function Product() {
   const table = useRef();
   const tr = useRef([]);
-  const deleteRow = (i) => {
+  const DeleteRow = (i) => {
     const index = tr.current[i].rowIndex;
     table.current.deleteRow(index);
   };
 
   const data = [
     ["กางเกงยีนส์", 1200],
-    ["เสื้อยืด",350],
-    ["เสื้อแขนยาว",640],
-    ["หมวก",380],
+    ["เสื้อยืด", 350],
+    ["กางเกงขาสั้น", 450],
+    ["หมวก", 500],
+    ["ถุงเท้า", 100],
   ];
 
   return (
     <>
       <Layout />
-      <h4>Product</h4>  
-      <Table striped bordered hover className="my-3" ref={table}>
+      <MenuFood/>
+      {/* <h4>Products</h4> */}
+      {/* <Table striped bordered hover className="my-3" ref={table}>
         <thead>
           <tr>
             <th>Product Name</th>
@@ -89,24 +94,26 @@ function Product(){
           </tr>
         </thead>
         <tbody>
-          {data.map((item, i) => (
-            <tr
-              ref={(el) => {
-                tr.current[i] = el;
-              }}
-              key={i}
-            >
-              <td>{item[0]}</td>
-              <td>{item[1]}</td>
-              <td className="text-center">
-                <Button variant="danger" onClick={() => deleteRow(i)}>
-                  Delete
-                </Button>
-              </td>
-            </tr>
-          ))}
+          {data.map((item, i) => {
+            return (
+              <tr
+                ref={(el) => {
+                  tr.current[i] = el;
+                }}
+                key={i}
+              >
+                <td>{item[0]}</td>
+                <td>{item[1]}</td>
+                <td className="text-center">
+                  <Button variant="danger" onClick={() => DeleteRow(i)}>
+                    Delete
+                  </Button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
-      </Table>
+      </Table> */}
     </>
   );
 }
@@ -114,14 +121,14 @@ function Product(){
 function App() {
   return (
     <BrowserRouter>
-    <Container className="p-3 my-3 bg-light">
-      <Routes>
-        <Route path="/" element={<Index/>} />
-        <Route path="/main" element={<Index/>} /> 
-        <Route path="/products" element={<Product />} />
-        <Route path="/contact" element={<Contact/>} />
-      </Routes>
-    </Container>
+      <Container className="p-3 my-3 bg-light">
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/main" element={<Index />} />
+           <Route path="/product" element={<Product />} />
+          <Route path="/contact" element={<Contact />} /> 
+        </Routes>
+      </Container>
     </BrowserRouter>
   );
 }

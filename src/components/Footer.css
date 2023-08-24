@@ -1,0 +1,11 @@
+.textname{
+    color: rgb(43, 43, 194);
+}
+
+.Back{
+    color: blue;
+    margin-left: 1000px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}

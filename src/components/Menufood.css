@@ -1,0 +1,26 @@
+.MenuFood{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    column-gap: 30px;
+    row-gap: 16px;
+}
+.imga01{
+    width: 350px;
+    height: 250px;
+}
+.texta1{
+    text-align: center;
+    
+}
+
+.imga02{
+    width: 350px;
+    height: 250px;
+}
+
+.imga03{
+    width: 350px;
+    height: 250px;
+}
